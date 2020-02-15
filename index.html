@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="stonks">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 3</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+<body ng-controller="stonk-controller" ng-init="getItems(); drawChart()">
+  <div class="container">
+      <div class="pb-2 mt-4 mb-4 border-bottom">
+        <h1>Search stocks by symbol:</h1>
+        <p>Get instant current-day prices updated every 5 minutes.<p>
+      </div>
+      <form action="index.html" method="get" class="form-horizontal center mt-2">
+        <div class="form-group form-group-lg mt-2">
+          <div class="col-sm-10 center">
+            <input class="form-control center" name="search" type="text" id="formGroupInputLarge" placeholder="Search">
+          </div>
+        </div>
+      </form>
+  </div>
+    <div id="chart_div"></div>
+    <div class="portable container">
+      <div class="row">
+        <div class="portable col">Open <span class="float-right">{{open}}</span></div>
+        <div class="portable col">High <span class="float-right">{{high}}</span></div>
+        <div class="w-100"></div>
+        <div class="portable col">Low <span class="float-right">{{low}}</span></div>
+        <div class="portable col">Close<span class="float-right">{{close}}</span></div>
+      </div>
+    </div>
+</body>
+<script src="response.js"></script>
+</html>
