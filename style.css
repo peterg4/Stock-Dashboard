@@ -3,7 +3,7 @@ body{
     color: ivory;
 }
 #chart_div{
-    width: 100%;
+    width: 70%;
     min-height: 500px;
     margin: 0 auto;
 }
