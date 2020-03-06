@@ -57,7 +57,7 @@ app.controller("stonk-controller", ['$scope','$http',function($scope, $http) {
           
                   var options = {
                     title: data["Meta Data"]["2. Symbol"]+" - "+new Date(data["Meta Data"]["3. Last Refreshed"]),
-                    hAxis: {title: 'Date',  titleTextStyle: {color: '#fffff0'}, textStyle:{color: '#fffff0'}, gridlines:{color: '#555555'}},
+                    hAxis: {title: '',  titleTextStyle: {color: '#fffff0'}, textStyle:{color: '#fffff0'}, gridlines:{color: '#555555'}},
                     titleTextStyle: {color: '#fffff0'},
                     backgroundColor: '#333333',
                     colors:['#0F9D58'],
